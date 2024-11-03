@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&family=Young+Serif&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+    /* COLOR */
+    --White: hsl(0, 0%, 100%);
+    --Light-pink: hsl(275, 100%, 97%);
+    --Light-purple: hsl(293, 78%, 52%);
+    --Grayish-purple: hsl(292, 16%, 49%);
+    --Dark-purple: hsl(292, 42%, 14%);
+    --Gray: rgba(187, 187, 187, 0.2);
+
+    /* FONT-WEIGHT */
+    --FONT-WEIGHT-1: 400;
+    --FONT-WEIGHT-2: 600;
+    --FONT-WEIGHT-3: 700;
+}
+
+body {
+    background-color: var(--Light-pink);
+    background-image: url("assets/images/background-pattern-mobile.svg");
+    color: var(--Grayish-purple);
+    font-family: 'Work Sans';
+    font-weight: var(--FONT-WEIGHT-1);
+    font-size: 16px;
+    min-height: 100vh;
+    background-repeat: repeat-x;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    background-color: var(--White);
+    border-radius: 15px;
+    padding: 2rem;
+    margin: 0px 25px 50px;
+}
+
+.heading {
+    color: var(--Dark-purple);
+    font-size: 50px;
+    font-weight: var(--FONT-WEIGHT-3);
+    margin: 7px 0px;
+
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.heading > div svg {
+    width: 35px;
+}
+
+button {
+    color: var(--Dark-purple);
+    font-weight: var(--FONT-WEIGHT-2);
+    font-size: 17px;
+    width: 100%;
+    padding: 15px 0px;
+    text-align: left;
+    background-color: transparent;
+    border-color: transparent;
+    outline: none;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+}
+
+button:active, button:hover {
+    color: var(--Light-purple);
+    cursor: pointer;
+}
+
+button >  svg {
+    width: 35px;
+}
+
+p[id ^= "ans"] {
+    height: 0px;
+    line-height: 1.4rem;
+    border-bottom: 2px solid var(--Gray);
+    overflow: hidden;
+}
+
+p[id = "ans4"] {
+    border: none;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media screen and (min-width: 375px) {
+    body {
+        background-image: url("assets/images/background-pattern-desktop.svg");
+    }
+    main {
+        width: 560px;
+    }
+}
