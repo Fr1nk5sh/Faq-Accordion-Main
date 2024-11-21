@@ -13,18 +13,24 @@ var svgImg3 = document.getElementById("svg3");
 var svgImg4 = document.getElementById("svg4");
 
 var closedBlock = true;
+var closedBlock1 = false
+
+ansBox1.style.height = "auto"
+ansBox1.style.padding = "7px 0px 23px"
+svgImg1.innerHTML = minus
 
 function openContent1() {
-    if (closedBlock == true) {
-        ansBox1.style.transition = "0.3s"
+    /* closedBlock = false */
+    if (closedBlock1 == true) {
         ansBox1.style.height = "auto"
         ansBox1.style.padding = "7px 0px 23px"
-        closedBlock = false
+        closedBlock1 = false
         svgImg1.innerHTML = minus
     } else{
         ansBox1.style.height = "0px"
         ansBox1.style.padding = "0px"
-        closedBlock = true
+        ansBox1.style.transition = "0.3s"
+        closedBlock1 = true
         svgImg1.innerHTML = plus
     }   
 }
